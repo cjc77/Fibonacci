@@ -5,8 +5,8 @@ import time
 def fib(x):
     x += 1  # so input produces expected value (i.e. 6 -> 8, 7 -> 13)
     f = [int(i) for i in range(0, x)]
-    f[0] = 0
-    f[1] = 1
+    if x <= 1:
+        return x
     for j in range(2, x):
         f[j] = f[j - 1] + f[j - 2]
     return f[x - 1]
