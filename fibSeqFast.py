@@ -2,7 +2,7 @@
 
 import time
 
-def fib(x):
+def fib(n):
     if n < 2:
         return n
     else:
