@@ -3,13 +3,15 @@
 import time
 
 def fib(x):
-    x += 1  # so input produces expected value (i.e. 6 -> 8, 7 -> 13)
-    f = [int(i) for i in range(0, x)]
-    if x <= 1:
-        return x
-    for j in range(2, x):
-        f[j] = f[j - 1] + f[j - 2]
-    return f[x - 1]
+    if n < 2:
+        return n
+    else:
+        n1, n2 = 1, 1
+        for i in range(2, n):
+            new_n = n1 + n2
+            n2 = new_n
+            n1 = n2
+    return n2
 
 
 def time_test(x):
